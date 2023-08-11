@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:wght@400;700&family=Poppins:wght@100;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap");
+.App {
+  font-family: "Poppins";
+  text-align: center;
+}
+
+body {
+  background-color: #f0f9ff;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fb7185;
+  padding: 1rem;
+  color: white;
+}
+
+select {
+  padding: 5px;
+  border: 1px #ccc solid;
+}
+
+.header input {
+  padding: 8px;
+  width: 15rem;
+  border-radius: 5px;
+  border: 1px #ccc solid;
+}
+
+.meetups--heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 1rem;
+}
+
+.main div {
+  width: 100%;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.meetup {
+  width: 18rem;
+  text-align: left;
+  position: relative;
+  border-radius: 10px;
+}
+
+.meetup img {
+  width: 18rem;
+  object-fit: cover;
+  height: 10rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.meetup h4,
+.meetup p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.meetup h5 {
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  background-color: white;
+  padding: 5px;
+}
+
+.details--div {
+  display: flex;
+}
+
+.details--div > div:first-child {
+  flex: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0rem 2rem;
+  text-align: left;
+}
+
+.details--div > div:first-child img {
+  width: 100%;
+  height: 25rem;
+}
+
+.details--div > div:last-child {
+  flex: 40%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0rem 2rem;
+  text-align: left;
+}
+
+.details--div h3 {
+  margin: 1rem 5px;
+}
+
+.time--card {
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 10px;
+}
+
+.time--card div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.event--tags {
+  display: flex;
+  gap: 5px;
+}
+
+.event--tags p {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fb7185;
+  color: #fff;
+}
+
+p {
+  font-size: 14px;
+  margin: 5px;
+}
+
+.speaker--card {
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.speaker--card h4 {
+  margin: 5px;
+}
+.speaker--card img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 30%;
+}
+
+.RSVP--modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.RSVP--modal label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Styles for inputs */
+.RSVP--modal input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Styles for the add button */
+.RSVP--modal button {
+  padding: 10px 20px;
+  background-color: #fda4af;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.RSVP--modal button:hover {
+  background-color: #fb7185;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #fda4af;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #fb7185;
+}
